@@ -74,21 +74,21 @@ Import this collection for testing all endpoints:
 
 
 ## 📁 Folder Structure
-
+```
 .
 ├── routes/
 │   ├── customer.js
-│   └── branch.js
-|   └── index.js
-├── models/
-│   ├── customerModel.js
-│   └── branchModel.js
+│   ├── branch.js
+│   └── index.js
 ├── swagger/
 │   └── swagger.js
 ├── .env
 ├── .gitignore
-├── index.js
+├── CustomsBroker.postman_collection.json
 ├── db.js
+├── index.js
+├── package-lock.json
 ├── package.json
-├── README.md
-└── CustomsBroker.postman_collection.json
+└── README.md
+```
+
