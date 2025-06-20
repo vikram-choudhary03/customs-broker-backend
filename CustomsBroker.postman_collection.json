@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "67b694ef-8840-458c-b87a-3be876270b84",
+		"name": "Customs Customers backend",
+		"description": "To test endpoints of customers and branch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25557959"
+	},
+	"item": [
+		{
+			"name": "to create a customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Jay\", \n    \"email\" : \"bghj@gmail.com\", \n    \"gstin\" : \"29AAAAP0267H1ZK\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of customre with their branches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/all/with-branches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"all",
+						"with-branches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To fetch customer with given ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/685541beccab86021187040f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"685541beccab86021187040f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to update the customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Singh\", \n    \"email\" : \"bghjo@gmail.com\", \n    \"id\" : \"685553cd9191f4237a31ee25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a customer by its ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : \"685553cd9191f4237a31ee25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/customers/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to create a new branch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"branch_code\": \"GFKGFK\",\n  \"location\": \"Mumbai\",\n  \"customer_id\": \"685542ecb48bf7e61b6d6579\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/branches/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"branches",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "to get branch given customer ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/branches?customerId=685542ecb48bf7e61b6d6579",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"branches"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "685542ecb48bf7e61b6d6579"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
